@@ -7,14 +7,13 @@
         <version>2.33</version>
         <relativePath />
     </parent>
-    <artifactId>ob10-versions-for-bitbucket</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>table-sectioned-view</artifactId>
+    <version>1.0.0</version>
     <packaging>hpi</packaging>
     <properties>
         <jenkins.version>2.60.3</jenkins.version>
     </properties>
-    <name>OB10 versions for BitBucket Plugin</name>
-    <description>Plugin to display applications versions</description>
+    <name>Table sectioned view</name>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/TODO+Plugin</url>
     <licenses>
         <license>
@@ -42,55 +41,14 @@
         </pluginRepository>
     </pluginRepositories>
 
+    <description>Plugin to display applications versions</description>
 
-  <!-- If you want to depend on other plugins:
-  <dependencies>
-    <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
-      <artifactId>credentials</artifactId>
-      <version>1.9.4</version>
-    </dependency>
-  </dependencies>
-  -->
-
-  <dependencies>
-
-   <dependency>
-     <groupId>org.jenkins-ci.plugins</groupId>
-     <artifactId>view-job-filters</artifactId>
-     <version>2.1.1</version>
-   </dependency>
-
-   <dependency>
-     <groupId>org.jenkins-ci.plugins</groupId>
-     <artifactId>token-macro</artifactId>
-     <version>2.5</version>
-   </dependency>
-
-   <dependency>
-     <groupId>org.jenkins-ci.plugins</groupId>
-     <artifactId>nested-view</artifactId>
-     <version>1.17</version>
-   </dependency>
-
-   <dependency>
-     <groupId>org.jenkins-ci.plugins</groupId>
-     <artifactId>console-column-plugin</artifactId>
-     <version>1.5</version>
-   </dependency>
-   <dependency>
-
-     <groupId>org.jenkins-ci.plugins</groupId>
-     <artifactId>sectioned-view</artifactId>
-     <version>1.25</version>
-   </dependency>
-
-   <dependency>
-     <groupId>org.jenkins-ci.plugins</groupId>
-     <artifactId>cloudbees-folder</artifactId>
-     <version>6.0.0</version>
-   </dependency>
-
-  </dependencies>
+    <dependencies>
+     <dependency>
+       <groupId>org.jenkins-ci.plugins</groupId>
+       <artifactId>sectioned-view</artifactId>
+       <version>1.25</version>
+     </dependency>
+    </dependencies>
 
 </project>

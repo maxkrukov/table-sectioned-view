@@ -1,0 +1,37 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:sv="/lib/sectioned_view" xmlns:f="/lib/form" xmlns:i="jelly:fmt">
+
+
+    <style>
+        .j-table {
+            border: 1px solid black;
+            display: inline-block;
+        }
+        .j-table table{
+            border-collapse: collapse;
+            border: 0;
+            margin: -1px;
+        }
+
+        .j-table tr:nth-child(odd) {
+            background-color: #ddd;
+        }
+
+        .j-table tr,
+        .j-table tr td,
+        .j-table tr th {
+            border: 1px solid black;
+            padding: 4px;
+        }
+
+    </style>
+
+<j:if test="${section.name.length() > 0}">
+  <h2>${section.name}</h2>
+</j:if>
+
+<div class="j-table">
+<j:out value="${section.getStdout()}"/>
+</div>
+
+</j:jelly>
