@@ -4,7 +4,7 @@ import java.io.*;
 import org.apache.commons.io.FileUtils;
 import java.nio.charset.*;
 
-public class bash_exec {
+public class SysExec {
 
     public static String run(String script, String scriptPath, String lang) throws InterruptedException, IOException {
 
@@ -19,7 +19,7 @@ public class bash_exec {
 
         if ( scriptPath.matches(" *") ) {
             FileUtils.writeStringToFile(tmpFile, script, StandardCharsets.UTF_8);
-            scriptPath = tmpFile.getAbsolutePath();
+            scriptPath = tmpFile.getAbsolutePath();            
         }
 
         String[] cmd = new String[]{"/usr/bin/env", lang, scriptPath};
@@ -53,7 +53,7 @@ public class bash_exec {
         }
         System.err.println("TableSectionView plugin: Process done, exit status was " + p.exitValue());
 
-        tmpFile.deleteOnExit();
+        tmpFile.delete();
 
         if ( p.exitValue() > 0 ) {
             return "Error script syntax";

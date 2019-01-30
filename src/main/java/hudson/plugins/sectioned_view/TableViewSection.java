@@ -20,7 +20,7 @@ public class TableViewSection extends SectionedViewSection {
     }
 
     public String getStdout() throws InterruptedException, IOException {
-        String out = bash_exec.run(script, scriptPath , lang);
+        String out = SysExec.run(script, scriptPath , lang);
         String[] abc = out.split("\n");
         String result = CsvToTable.main(abc);
         return result;
