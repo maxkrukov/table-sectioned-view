@@ -53,7 +53,11 @@ public class SysExec {
         }
         System.err.println("TableSectionView plugin: Process done, exit status was " + p.exitValue());
 
-        tmpFile.delete();
+        try {
+            tmpFile.delete();
+        } catch (Exception e) {
+            System.err.println(e);
+        }
 
         if ( p.exitValue() > 0 ) {
             return "Error script syntax";
